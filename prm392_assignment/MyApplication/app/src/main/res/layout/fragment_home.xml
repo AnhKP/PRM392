@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="no"
+    tools:context=".ExpenseManager.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/grey"
+        tools:ignore="UselessParent">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_person_24" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/txtHello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hi_jasmine"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ViewPager Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+            <LinearLayout
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/_99092_calendar_icon" />
+                <TextView
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="60dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txtMonthValue"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/_310117_coin_dollar_money_icon" />
+                    <TextView
+                        android:id="@+id/tvIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/income"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="52dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/txtIncomeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7000000VND"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/_2689625_cost_expense_pricing_budget_investment_icon" />
+                    <TextView
+                        android:id="@+id/tvExpenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expenses"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="40dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/txtExpenseValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000000VND"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/_938654_balance_finance_and_business_icon" />
+                    <TextView
+                        android:id="@+id/tvRemaining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remaining"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/txtRemainingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4000000VND"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RecyclerView Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvExpenseHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense_highest_in_month"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/viewExpenseRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                android:padding="2dp"
+                android:importantForAccessibility="no"
+                android:contentDescription=""/>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvIncomeHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/income_highest_in_year"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/viewIncomeRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                android:padding="2dp"
+                android:importantForAccessibility="no"
+                android:contentDescription=""/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</FrameLayout>

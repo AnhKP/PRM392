@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ExpenseMangamentAPI\\ExpenseMangamentAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ExpenseManagementWeb\\ExpenseManagementWeb.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

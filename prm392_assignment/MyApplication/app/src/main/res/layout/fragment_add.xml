@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpenseManager.AddFragment">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/_310117_coin_dollar_money_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+    <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại thêm: "
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+    />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="5dp"
+            android:text="@string/thu_nh_p"
+            android:textColor="@color/yellow"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="@string/kho_n_chi"
+            tools:ignore="TouchTargetSizeCheck"/>
+    </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/incomeForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center"
+            android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_310117_coin_dollar_money_icon" />
+            <EditText
+                android:id="@+id/editTextIncomeAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="@string/nh_p_thu_nh_p"
+                android:inputType="text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_99092_calendar_icon" />
+            <Spinner
+                android:id="@+id/spnMonthSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minHeight="48dp" />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/_99092_calendar_icon" />
+                <Spinner
+                    android:id="@+id/spnYearSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/yellow"
+                android:padding="10dp"
+                android:text="@string/th_m_thu_nh_p_m_i"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:id="@+id/expenseForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/_267302_bank_building_finance_home_office_icon" />
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/_2689332_expense_cost_spending_budget_expenditure_icon" />
+            <EditText
+                android:id="@+id/editTextExpenseAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nh_p_s_ti_n"
+                android:inputType="text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/_99092_calendar_icon" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextExpenseDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Chọn ngày"
+                android:focusable="false" />
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/date_time" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/_530843_document_general_letter_note_office_icon" />
+            <EditText
+                android:id="@+id/editTextExpenseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nh_p_ghi_ch"
+                android:inputType="text"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:text="@string/th_m_kho_n_chi_m_i"/>
+    </LinearLayout>
+
+
+</FrameLayout>

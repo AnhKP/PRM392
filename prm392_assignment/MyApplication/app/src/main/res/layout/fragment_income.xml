@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpenseManager.IncomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:padding="15dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+       <TextView
+           android:layout_width="75dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="@string/thu_nh_p"
+           android:textColor="@color/black">
+       </TextView>
+
+       <Spinner
+           android:id="@+id/spnMonthSelector"
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:minHeight="48dp" />
+
+       <Spinner
+           android:id="@+id/spnYearSelector"
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:minHeight="48dp" />
+
+       <ImageView
+           android:id="@+id/imgSearch"
+           android:layout_gravity="center"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:scaleType="centerCrop"
+           android:src="@drawable/_038105_marketing_research_finance_business_search_icon" />
+   </LinearLayout>
+   <LinearLayout android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:layout_marginTop="85dp"
+       android:orientation="horizontal"
+       android:padding="10dp">
+       <ImageView
+           android:layout_gravity="center"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:scaleType="centerCrop"
+           android:src="@drawable/_99092_calendar_icon" />
+       <TextView
+           android:id = "@+id/tvMonth"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textSize="14sp"
+           android:textStyle="bold"
+           android:layout_gravity="center"
+           android:text="@string/th_ng"
+           />
+   </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_310117_coin_dollar_money_icon" />
+       <TextView
+           android:id = "@+id/tvAmount"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textSize="14sp"
+           android:layout_gravity="center"
+           android:padding="5dp"
+           android:textStyle="bold"
+           android:text="@string/t_ng_thu_nh_p"
+           />
+   </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical">
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:contentDescription="@string/history_income" />
+   </LinearLayout>
+
+</FrameLayout>
